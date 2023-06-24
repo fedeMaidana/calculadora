@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap');
+
+
+:root{
+    /* ---------- COLORS ---------*/
+    --main__color: rgb(29, 29, 29);
+    --secondary__color: rgb(24, 24, 24);
+    --tertiary__color: rgb(14, 30, 26);
+    --all-clear__button__color: rgb(30, 14, 14);
+    --delete__button__color: rgb(30, 22, 14);
+    --first-shadow__color: rgb(38 38 38);
+    --second-shadow__color: rgb(16, 16, 16);
+    --display__background-color: rgb(25, 32, 26);
+    --display__text__color: rgb(23, 61, 29);
+    --main__text__color: rgb(197, 197, 197);
+    --white: rgb(255, 255, 255);
+    --turquoise: rgb(0, 255, 213);
+    --red: rgb(255, 0, 0);
+    --orange: rgb(255, 119, 0);
+
+    /* ---------- SHADOWS ---------*/
+    --first__shadow: -2px -2px 3px;
+    --second__shadow: 2px 2px 3px 0px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--main__color);
+
+    height: 100vh;
+    width: 100vw;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .main{
+        height: 60vh;
+        padding: 10px;
+
+        background: repeating-conic-gradient(#00000047 1.000045%, #00000000 1.0005%);
+        border-radius: 10px;
+        box-shadow:
+            var(--second__shadow) var(--second-shadow__color),
+            var(--first__shadow) var(--first-shadow__color);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .article{
+            height: 10vh;
+            padding: 10px;
+            width: 100%;
+
+            background-color: var(--display__background-color);
+            box-shadow: inset var(--second__shadow) var(--second-shadow__color), inset var(--first__shadow) var(--first-shadow__color);
+            border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+            .input{
+                background-color: var(--display__background-color);
+                color: var(--display__text__color);
+
+                width: 100%;
+                height: 100%;
+
+                font-family: 'Chakra Petch', sans-serif;
+                font-size: 2rem;
+                font-weight: 700;
+                text-align: end;
+
+                cursor: default;
+            }
+        }
+
+        .nav{
+            height: calc((100% - 20%) - 40px);
+
+            .form{
+                align-content: space-between;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                height: 100%;
+
+                .button{
+                    width: 21%;
+                    height: 15%;
+
+                    background-color: var(--main__color);
+                    border-radius: 10px;
+                    box-shadow:
+                        var(--second__shadow) var(--second-shadow__color),
+                        var(--first__shadow) var(--first-shadow__color);
+                    color: var(--main__text__color);
+                    cursor: pointer;
+
+                    font-weight: 600;
+
+                    &:hover{
+                        color: var(--white);
+                        text-shadow:
+                            0px 0px 3px var(--white),
+                            0px 0px 6px var(--white),
+                            0px 0px 9px var(--white),
+                            0px 0px 12px var(--turquoise),
+                            0px 0px 15px var(--turquoise),
+                            0px 0px 18px var(--turquoise),
+                            0px 0px 21px var(--turquoise),
+                            0px 0px 24px var(--turquoise),
+                            0px 0px 27px var(--turquoise);
+
+                        transition: text-shadow .1s linear;
+                    }
+
+                    &:active{
+                        box-shadow: none;
+                        color: var(--white);
+                        text-shadow:
+                            1px 1px 3px var(--white),
+                            1px 1px 6px var(--white),
+                            1px 1px 9px var(--white),
+                            1px 1px 12px var(--turquoise),
+                            1px 1px 15px var(--turquoise),
+                            1px 1px 18px var(--turquoise),
+                            1px 1px 21px var(--turquoise),
+                            1px 1px 24px var(--turquoise),
+                            1px 1px 27px var(--turquoise);
+                    }
+
+                    &:nth-child(1){
+                        background-color: var(--all-clear__button__color);
+
+                        width: 47%;
+                    }
+
+                    &:nth-child(1):hover, &:nth-child(1):active{
+                        text-shadow:
+                            0px 0px 3px var(--white),
+                            0px 0px 6px var(--white),
+                            0px 0px 9px var(--white),
+                            0px 0px 12px var(--red),
+                            0px 0px 15px var(--red),
+                            0px 0px 18px var(--red),
+                            0px 0px 21px var(--red),
+                            0px 0px 24px var(--red),
+                            0px 0px 27px var(--red);
+                    }
+
+                    &:nth-child(2){
+                        background-color: var(--delete__button__color);
+                    }
+
+                    &:nth-child(2):hover, &:nth-child(2):active{
+                        text-shadow:
+                            0px 0px 3px var(--white),
+                            0px 0px 6px var(--white),
+                            0px 0px 9px var(--white),
+                            0px 0px 12px var(--orange),
+                            0px 0px 15px var(--orange),
+                            0px 0px 18px var(--orange),
+                            0px 0px 21px var(--orange),
+                            0px 0px 24px var(--orange),
+                            0px 0px 27px var(--orange);
+                    }
+
+                    &:nth-child(3), &:nth-child(7), &:nth-child(11), &:nth-child(15){
+                        background-color: var(--secondary__color);
+                    }
+
+                    &:nth-child(19){
+                        background-color: var(--tertiary__color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    body .main{
+        width: auto;
+        background: none;
+        background-color: rgb(25, 25, 25);
+    }
+}
